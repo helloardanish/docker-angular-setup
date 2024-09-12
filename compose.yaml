@@ -1,0 +1,11 @@
+services:
+  frontend:
+    build: .
+    ports:
+      - "4200:4200"
+    volumes:
+      - ".:/app" #sync local folder with container
+
+    stdin_open: true
+    tty: true
+
