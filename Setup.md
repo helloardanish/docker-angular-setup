@@ -38,6 +38,7 @@ docker compose build
 ```
 docker compose up
 docker compose up -d
+docker-compose up --build
 ```
 
 # Step 5: Access bash inside container
@@ -71,3 +72,10 @@ ng serve --host 0.0.0.0
 ```
 
 # Step 8: Verify in the browser
+
+
+## To run just run below command
+
+```
+docker-compose up --build
+```

@@ -1,11 +1,11 @@
 services:
-  frontend:
-    build: .
+  angular-app:
+    build:
+      context: ./test-angular-app
+      dockerfile: Dockerfile
     ports:
       - "4200:4200"
     volumes:
-      - ".:/app" #sync local folder with container
-
-    stdin_open: true
-    tty: true
-
+      - ./test-angular-app:/app  # Mount the current directory to /app in the container
+    stdin_open: true  # Allow running commands interactively
+    tty: true  # Keep the container running
