@@ -79,3 +79,16 @@ ng serve --host 0.0.0.0
 ```
 docker-compose up --build
 ```
+
+### Take machine access to generate component and services.
+
+```
+docker ps #get the image name/id
+docker exec -it docker-angular-setup-angular-app-1 bash
+```
+
+```
+ng g c home
+```
+
+Change sync with local work space

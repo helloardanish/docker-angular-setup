@@ -7,8 +7,9 @@ WORKDIR /app
 # Copy only package.json and package-lock.json first to leverage Docker's cache
 COPY package*.json ./
 
-# Install any needed packages
-RUN npm install
+# Install Angular CLI globally and project dependencies
+RUN npm install -g @angular/cli \
+    && npm install
 
 # Copy the rest of the application
 COPY . .
