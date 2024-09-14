@@ -14,6 +14,8 @@ docker exec -it docker-angular-setup-frontend-1 bash
 ng new reslin
 
 # move the project directory in desired directory
+
+# close the running shell using ctrl+c or docker compose down
 ```
 
 ## Setup live change
@@ -60,9 +62,11 @@ CMD ["npm", "run", "start"]
 #### Add analytics to false in angular.json file else it will keep waiting for inputs
 
 ```
-"cli": {
+"$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
     "analytics": false
   },
+  "version": 1,
 ```
 
 #### Create compose.yaml file
